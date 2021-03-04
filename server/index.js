@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost:27017/element-admin',{
     useNewUrlParser:true,
     useFindAndModify:true,
     useCreateIndex:true,
-    useUnifiedTopology:true
+    // useUnifiedTopology:true
 })
 
 const Article = mongoose.model('Article',new mongoose.Schema({
