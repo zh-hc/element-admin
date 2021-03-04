@@ -22,16 +22,19 @@ const Article = mongoose.model('Article',new mongoose.Schema({
 app.get('/',async(req,res)=>{
     res.send('index')
 })
+
 // 新增文章
 app.post('/api/articles',async(req,res)=>{
-    const arcitle = await Article.create(req.body)
-    res.send(arcitle)
+    const article = await Article.create(req.body)
+    res.send(article)
 })
+
 // 文章接口
 app.get('/api/articles',async(req,res)=>{
     const articles = await Article.find()
     res.send(articles)
 })
+
 // 删除文章
 app.delete('/api/articles/:id',async(req,res)=>{
     await Article.findByIdAndDelete(req.params.id)
@@ -39,11 +42,13 @@ app.delete('/api/articles/:id',async(req,res)=>{
         status:true
     })
 })
+
 // 文章详情
 app.get('/api/articles/:id',async(req,res)=>{
     const article = await Article.findById(req.params.id)
     res.send(article)
 })
+
 // 修改文章
 app.put('/api/articles/:id',async(req,res)=>{
     const article = await Article.findByIdAndUpdate(req.params.id,req.body)
