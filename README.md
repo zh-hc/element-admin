@@ -30,6 +30,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 [参考视频链接](https://www.bilibili.com/video/BV1t441187pL)
 
-使用`nodemon server`指令开启服务端
+使用`nodemon server`指令开启服务端.
 
-使用`npm run serve`指令开启客户端
+使用`npm run serve`指令开启客户端.
+# element-admin
